@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrads. Bar & Lounge | Maasin City</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        /* Epic Club Background with Luxury Tint */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(5, 5, 5, 0.95)), 
+                        url('https://unsplash.com') no-repeat center center fixed;
+            background-size: cover;
+        }
+        /* Glow Effect Wrapper */
+        .brand-container {
+            margin-bottom: 2.5rem;
+            animation: pulseGlow 4s infinite alternate;
+        }
+        /* Custom Serif Logo Style replicating 'vrads.' style */
+        .logo-main {
+            font-family: 'Cinzel', serif;
+            font-size: 5.5rem;
+            font-weight: 800;
+            text-transform: lowercase;
+            letter-spacing: -2px;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255, 15, 58, 0.6);
+            line-height: 1;
+        }
+        .logo-dot {
+            color: #ff0f3a;
+            text-shadow: 0 0 15px #ff0f3a;
+        }
+        .logo-sub {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 0.5rem;
+            padding-left: 12px; /* Centers the text properly due to spacing */
+        }
+        /* The Taglines */
+        .headline {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 15, 58, 0.15);
+            border: 1px solid #ff0f3a;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ff0f3a;
+            box-shadow: 0 0 15px rgba(255, 15, 58, 0.2);
+            margin-bottom: 3rem;
+        }
+        /* Core Perks Horizontal Bar */
+        .features-grid {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3.5rem;
+            max-width: 800px;
+        }
+        .feature-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .feature-item:hover {
+            background: rgba(255, 15, 58, 0.08);
+            border-color: rgba(255, 15, 58, 0.4);
+            transform: translateY(-3px);
+        }
+        .bullet {
+            color: #ff0f3a;
+            margin-right: 8px;
+        }
+        /* Social Call to Action */
+        .cta-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            padding: 1.1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+        }
+        .cta-btn:hover {
+            background: #ff0f3a;
+            color: #ffffff;
+            box-shadow: 0 0 30px rgba(255, 15, 58, 0.6);
+            transform: scale(1.03);
+        }
+        /* Smooth animations for that premium vibe */
+        @keyframes pulseGlow {
+            0% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(255,15,58,0.2)); }
+            100% { transform: scale(1.02); filter: drop-shadow(0 0 25px rgba(255,15,58,0.5)); }
+        }
+        @media (max-width: 768px) {
+            .logo-main { font-size: 3.8rem; }
+            .logo-sub { font-size: 0.9rem; letter-spacing: 8px; }
+            .headline { font-size: 1.2rem; }
+            .features-grid { flex-direction: column; gap: 0.8rem; width: 100%; padding: 0 1rem; }
+            .feature-item { padding: 0.8rem; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <!-- Brand Group -->
+        <div class="brand-container">
+            <h1 class="logo-main">vrads<span class="logo-dot">.</span></h1>
+            <div class="logo-sub">bar & lounge</div>
+        </div>
+
+        <!-- Tagline / Hook -->
+        <h2 class="headline">Your new nightlife destination</h2>
+        
+        <div class="location-badge">
+            📍 Maasin City
+        </div>
+
+        <!-- Features Showcase -->
+        <div class="features-grid">
+            <div class="feature-item"><span class="bullet">⚡</span> DJ Nights</div>
+            <div class="feature-item"><span class="bullet">🎸</span> Live Music</div>
+            <div class="feature-item"><span class="bullet">🍹</span> Premium Drinks</div>
+            <div class="feature-item"><span class="bullet">🔥</span> Good Times</div>
+        </div>
+
+        <!-- Official Facebook Link Integration -->
+        <a href="https://www.facebook.com/vradsmaasin" target="_blank" class="cta-btn">
+            Follow Us On Facebook
+        </a>
+    </section>
+
+</body>
+</html>
